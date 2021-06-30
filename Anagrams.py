@@ -1,4 +1,10 @@
+import time
 from typing import Dict
+
+def read_file(path): 
+    with open(path) as f:
+       for l in f:
+            check(l.rstrip("\n"))
 
 def sanitize(word):
   return str(sorted(word))
@@ -14,3 +20,17 @@ def check(word):
         dic.setdefault(key, [])
         dic[key].append(word)
     return match
+
+if __name__ == '__main__':
+    start_time = time.time()
+    read_file("wordlist.txt")
+    
+    resul = ""
+    
+    for key, value in dic.items():
+        if  len(value) > 1:    
+            resul += str(value) + '\n'
+
+    print(resul)
+    end_time = time.time()
+    print(end_time-start_time)
