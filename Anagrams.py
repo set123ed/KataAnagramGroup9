@@ -26,7 +26,7 @@ if __name__ == '__main__':
     read_file("wordlist.txt")
     
     resul = ""
-    
+
     for key, value in dic.items():
         if  len(value) > 1:    
             resul += str(value) + '\n'
