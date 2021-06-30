@@ -20,6 +20,13 @@ def check(word):
         dic.setdefault(key, [])
         dic[key].append(word)
     return match
+    
+def count():
+    count = 0     
+    for key, value in dic.items():
+        if  len(value) > 1:    
+            count += 1
+    return count
 
 if __name__ == '__main__':
     start_time = time.time()
