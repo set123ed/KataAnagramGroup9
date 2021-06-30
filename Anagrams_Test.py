@@ -12,4 +12,11 @@ def test_isAnagram():
     Anagram.check(word1)
     assert Anagram.check(word2) == True
 
+def test_IsnotAnagram():
+    word1 = "amor"
+    word2 = "perro"
+    Anagram.check(word1)
+    assert Anagram.check(word2) == False
+  
+
 
